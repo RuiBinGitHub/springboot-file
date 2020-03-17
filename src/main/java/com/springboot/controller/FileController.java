@@ -22,7 +22,7 @@ public class FileController {
 	private String mypth;
 
 	private File file = null;
-	
+
 	@RequestMapping(value = "/findfile")
 	public String findFile(String name) throws IOException {
 		User user = (User) AppUtils.findMap("user");
@@ -38,19 +38,21 @@ public class FileController {
 		while ((content = buffer.readLine()) != null) {
 			results = content;
 		}
+		if (results != null && results.length() > 4)
+			results = results.substring(2, results.length() - 2).replace("\",\"", " ");
 		buffer.close();
 		reader.close();
 		return results;
 	}
 
-	
 	@RequestMapping(value = "/editfile")
 	public String editFile(String text) throws IOException {
 		if (file == null || !file.exists())
 			return "提示：权限不足或文件不存在！";
 		FileOutputStream stream = new FileOutputStream(file);
 		OutputStreamWriter writer = new OutputStreamWriter(stream, "utf-8");
-		writer.write(text);
+		text = "[\"" + text + "\"]";
+		writer.write(text.replace(" ", "\",\""));
 		writer.close();
 		stream.close();
 		return "提示：文件修改成功！";

@@ -61,9 +61,34 @@ body {
 	cursor: pointer;
 }
 
-#tab1 {
+#listTitle {
 	width: 640px;
-	margin-left: 80px;
+	margin: 0px 80px;
+	float: left;
+}
+
+#listTitle div {
+	height: 40px;
+	color: #fff;
+	font-size: 18px;
+	line-height: 40px;
+	font-family: 仿宋;
+	text-align: center;
+	font-weight: 600;
+	background-color: #51596B;
+	float: left;
+}
+
+#listInfo {
+	width: 640px;
+	max-height: 290px;
+	margin: 0px 80px;
+	overflow-y: scroll;
+	float: left;
+}
+
+#tab1 {
+	width: 100%;
 	text-align: center;
 	float: left;
 }
@@ -73,23 +98,7 @@ body {
 }
 
 #tab1 tr td {
-	overflow: hidden;
-	white-space: nowrap;
-	text-overflow: ellipsis;
-}
-
-.row1 {
-	color: #fff;
-	font-size: 18px;
-	line-height: 40px;
-	font-family: 仿宋;
-	text-align: center;
-	font-weight: 600;
-	background-color: #51596B;
-}
-
-.row2 {
-	height: 30px;
+	height: 25px;
 	font-size: 16px;
 	line-height: 25px;
 	font-family: 仿宋;

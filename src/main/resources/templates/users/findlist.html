@@ -14,23 +14,25 @@
         <div id="lable">用户列表</div>
         <input type="button" id="append" value="+ 添加"/>
       </div>
+      <div id="listTitle">
+        <div style="width:50px;">No</div>
+        <div style="width:220px;">账号</div>
+        <div style="width:220px;">密码</div>
+        <div style="width:150px;">操作</div>
+      </div>
+      <div id="listInfo">
       <table id="tab1">
-        <tr class="row1">
-          <td width="8%">No</td>
-          <td width="35%">账号</td>
-          <td width="35%">密码</td>
-          <td width="22%">操作</td>
-        </tr>
         <tr th:each="user,status:${list}" class="row2">
-          <td th:text="${status.count}"></td>
-          <td th:text=${user.name}></td>
-          <td th:text=${user.pass}></td>
-          <td>
+          <td width="8%" th:text="${status.count}"></td>
+          <td width="36%" th:text=${user.name}></td>
+          <td width="36%" th:text=${user.pass}></td>
+          <td width="20%">
             <input type="button" value="编辑" style="background-color:#2CACF1"/>
             <input type="button" value="删除" style="background-color:#F34D4D"/>
           </td>
         </tr>
       </table>
+      </div>
     </div>
   </body>
 </html>

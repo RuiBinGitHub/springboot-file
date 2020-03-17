@@ -8,7 +8,7 @@ $(document).ready(function() {
 	$("#tab1 tr").each(function(i) {
 		// 编辑用户
 		$(this).find("input:eq(0)").click(function() {
-			window.open("updateview?no=" + i);
+			window.open("updateview?no=" + (i + 1));
 		});
 		// 删除用户
 		$(this).find("input:eq(1)").click(function() {
@@ -16,7 +16,7 @@ $(document).ready(function() {
 				return false;
 			$(this).css("background-color", "#ccc");
 			$(this).attr("disabled", true);
-			if (Ajax("delete?no=" + i, null))
+			if (Ajax("delete?no=" + (i + 1), null))
 				alert("用户删除成功！");
 			else
 				location.href = "/write/user/loginview";
