@@ -1,0 +1,47 @@
+@charset "UTF-8";
+
+#main {
+	width: 400px;
+	height: 300px;
+	margin: 280px auto;
+	background-color: #ffffff;
+	text-align: center;
+}
+
+#p1 {
+	width: 100%;
+	height: 60px;
+	font-size: 36px;
+	font-family: 宋体;
+	font-weight: 600;
+	text-align: center;
+	float: left;
+}
+
+#p2 {
+	width: 100%;
+	height: 60px;
+	font-size: 18px;
+	font-family: 宋体;
+	font-weight: 600;
+	text-align: center;
+	float: left;
+}
+
+input {
+	width: 120px;
+	height: 30px;
+	color: #53CCD7;
+	font-size: 16px;
+	font-family: 宋体;
+	font-weight: 600;
+	background-color: #ffffff;
+	border: 1px solid #53CCD7;
+	border-radius: 3px;
+}
+
+input:hover {
+	color: #ffffff;
+	background-color: #53CCD7;
+	cursor: pointer;
+}

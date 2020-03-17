@@ -1,0 +1,21 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+  <head>
+  	<title>登录系统</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<link rel="stylesheet" type="text/css" href="/write/css/users/loginview.css"/>
+	<script type="text/javascript" src="/write/js/jquery-1.9.1.min.js"></script>
+	<script type="text/javascript" src="/write/js/users/loginview.js"></script>
+  </head>
+  <body>
+    <div id="main">
+      <div id="title">系统登录</div>
+      <div id="tips" th:text="${tips}"></div>
+      <form action="/write/user/login" method="post">
+        <div>账号：</div><input type="text" name="name" th:value="${name}"/>
+        <div>账号：</div><input type="text" name="pass" th:value="${pass}"/>
+        <p><input type="submit" value="登录"></p>
+      </form>
+    </div>
+  </body>
+</html>

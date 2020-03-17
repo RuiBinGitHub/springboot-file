@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+  <head>
+  	<title>添加用户</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<link rel="stylesheet" type="text/css" href="/write/css/users/insert.css"/>
+	<script type="text/javascript" src="/write/js/jquery-1.9.1.min.js"></script>
+	<script type="text/javascript" src="/write/js/users/insert.js"></script>
+  </head>
+  <body>
+    <div id="main">
+      <div id="title">添加用户</div>
+      <form id="form1" action="insert" method="post">
+      <div id="maininfo">
+        <div>登录账号：</div><input type="text" name="name"/>
+        <div style="width: 78px;"></div>
+        <div>登录密码：</div><input type="text" name="pass"/>
+      </div>
+      <table id="tab1">
+        <tr class="row1">
+          <td width="8%">No</td>
+          <td width="46%">文件夹名称</td>
+          <td width="46%">是否可以编辑</td>
+        </tr>
+        <tr th:each="name,status:${list}" class="row2">
+          <td th:text="${status.count}"></td>
+          <td th:text="${name}"></td>
+          <td><input type="checkbox" name="vest" th:value="${name}"/></td>
+        </tr>
+      </table>
+      </form>
+      <input type="button" id="commit" value="确定"/>
+    </div>
+  </body>
+</html>

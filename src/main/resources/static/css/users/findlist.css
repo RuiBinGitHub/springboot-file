@@ -1,0 +1,111 @@
+@charset "UTF-8";
+
+body {
+	background-color: #E8E8E8;
+}
+
+#main {
+	width: 800px;
+	height: 600px;
+	margin: 100px auto;
+	background-color: #ffffff;
+}
+
+#title {
+	width: 100%;
+	height: 48px;
+	font-size: 24px;
+	font-family: 宋体;
+	font-weight: 600;
+	text-indent: 20px;
+	line-height: 48px;
+	border-bottom: 2px solid #00953E;
+	float: left;
+}
+
+#infoTop {
+	width: 640px;
+	height: 40px;
+	border-bottom: 2px solid #51596B;
+	margin: 40px 80px 5px;
+	float: left;
+}
+
+#infoTop div {
+	width: 100px;
+	height: 100%;
+	color: #ffffff;
+	font-size: 18px;
+	font-family: 宋体;
+	font-weight: 600;
+	line-height: 40px;
+	text-align: center;
+	background-color: #51596B;
+	float: left;
+}
+
+#infoTop input {
+	width: 64px;
+	height: 30px;
+	color: #ffffff;
+	font-size: 14px;
+	font-family: 宋体;
+	font-variant: 600;
+	background-color: #3CB44B;
+	border: none;
+	float: right;
+}
+
+#infoTop input:hover {
+	background-color: #4fc45e;
+	cursor: pointer;
+}
+
+#tab1 {
+	width: 640px;
+	margin-left: 80px;
+	text-align: center;
+	float: left;
+}
+
+#tab1 tbody tr:nth-child(even) {
+	background-color: #EEEEEE;
+}
+
+#tab1 tr td {
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+.row1 {
+	color: #fff;
+	font-size: 18px;
+	line-height: 40px;
+	font-family: 仿宋;
+	text-align: center;
+	font-weight: 600;
+	background-color: #51596B;
+}
+
+.row2 {
+	height: 30px;
+	font-size: 16px;
+	line-height: 25px;
+	font-family: 仿宋;
+	font-weight: 600;
+	text-align: center;
+}
+
+#tab1 tbody tr td input {
+	width: 40px;
+	height: 20px;
+	color: #ffffff;
+	font-family: 等线;
+	border: none;
+}
+
+#tab1 tbody tr td input:hover {
+	cursor: pointer;
+	color: #F37B1D;
+}

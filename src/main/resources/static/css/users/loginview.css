@@ -1,0 +1,72 @@
+@charset "UTF-8";
+
+#main {
+	width: 360px;
+	height: 340px;
+	margin: 200px auto;
+	background-color: #fdfdfd;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+}
+
+#title {
+	width: 100%;
+	height: 80px;
+	font-size: 32px;
+	font-family: 宋体;
+	font-weight: 600;
+	text-align: center;
+	line-height: 120px;
+	float: left;
+}
+
+#tips {
+	width: 100%;
+	height: 30px;
+	color: #ff0000;
+	font-family: 宋体;
+	text-align: center;
+	line-height: 30px;
+	float: left;
+}
+
+form div {
+	width: 100px;
+	height: 60px;
+	font-size: 18px;
+	font-family: 宋体;
+	text-align: right;
+	line-height: 80px;
+	float: left;
+}
+
+form input[type=text], form input[type=password] {
+	width: 215px;
+	height: 32px;
+	font-size: 16px;
+	font-family: 宋体;
+	text-indent: 10px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	margin-top: 24px;
+	float: left;
+}
+
+form input[type=submit] {
+	width: 218px;
+	height: 32px;
+	color: #ffffff;
+	font-size: 18px;
+	font-family: 宋体;
+	margin-top: 24px;
+	margin-left: 100px;
+	background-color: #307AE8;
+	border: 1px solid #307AE8;
+	border-radius: 4px;
+	float: left;
+}
+
+form input[type=submit]:hover {
+	background-color: #5f98ed;
+	cursor: pointer;
+}

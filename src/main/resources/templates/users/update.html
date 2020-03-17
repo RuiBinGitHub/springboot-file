@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+  <head>
+  	<title>编辑用户</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<link rel="stylesheet" type="text/css" href="/write/css/users/update.css"/>
+		<script type="text/javascript" src="/write/js/jquery-1.9.1.min.js"></script>
+	<script type="text/javascript" src="/write/js/users/update.js"></script>
+  </head>
+  <body>
+    <div id="main">
+      <div id="title">编辑用户</div>
+      <form id="form1" action="update" method="post">
+      <input type="hidden" name="no" th:value="${param.no}"/>
+      <div id="maininfo">
+        <div>登录账号：</div><input type="text" name="name" th:value="${user.name}"/>
+        <div style="width: 78px;"></div>
+        <div>登录密码：</div><input type="text" name="pass" th:value="${user.pass}"/>
+      </div>
+      <table id="tab1">
+        <tr class="row1">
+          <td width="8%">No</td>
+          <td width="46%">文件夹名称</td>
+          <td width="46%">是否可以编辑</td>
+        </tr>
+        <tr th:each="name,status:${list}" class="row2">
+          <td th:text="${status.count}"></td>
+          <td th:text="${name}"></td>
+          <td><input type="checkbox" name="vest" th:value="${name}" th:checked="${#lists.contains(vest, name)}"/></td>
+        </tr>
+      </table>
+      </form>
+      <input type="button" id="commit" value="确定"/>
+    </div>
+  </body>
+</html>
