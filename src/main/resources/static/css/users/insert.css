@@ -103,15 +103,13 @@ body {
 	height: 30px;
 	margin-top: 20px;
 	margin-left: 80px;
-	margin-bottom: 40px;
 	color: #ffffff;
-	font-size: 16px;
+	font-size: 18px;
 	font-family: 宋体;
 	font-weight: 600;
 	background-color: #00953E;
 	border: none;
 	float: left;
-	color: #ffffff;
 }
 
 #commit:hover {

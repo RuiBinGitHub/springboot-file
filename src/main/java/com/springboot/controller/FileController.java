@@ -33,7 +33,7 @@ public class FileController {
 		ModelAndView view = new ModelAndView();
 		User user = (User) AppUtils.findMap("user");
 		if (StringUtils.isEmpty(user)) {
-			view.setViewName("/user/loginview");
+			view.setViewName("/users/loginview");
 			return view;
 		}
 		File file = new File(mypath);
@@ -45,8 +45,8 @@ public class FileController {
 			list2 = new ArrayList<String>(list2);
 			list1.retainAll(list2);
 		}
-		view.addObject("list", list1);
 		view.setViewName("files/findinfo");
+		view.addObject("list", list1);
 		return view;
 	}
 
@@ -63,11 +63,12 @@ public class FileController {
 		BufferedReader buffer = new BufferedReader(reader);
 		String content = null;
 		String results = null;
-		while ((content = buffer.readLine()) != null) {
+		while ((content = buffer.readLine()) != null) 
 			results = content;
+		if (results != null && results.length() > 4) {
+			results = results.substring(2, results.length() - 2);
+			results = results.replace("\",\"", " ");
 		}
-		if (results != null && results.length() > 4)
-			results = results.substring(2, results.length() - 2).replace("\",\"", " ");
 		buffer.close();
 		reader.close();
 		return results;

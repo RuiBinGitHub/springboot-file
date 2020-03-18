@@ -78,7 +78,7 @@ body {
 textarea {
 	width: 632px;
 	height: 200px;
-	font-size: 16px;
+	font-size: 18px;
 	font-family: 宋体;
 	border: 1px solid #ccc;
 	margin-left: 80px;
@@ -93,7 +93,7 @@ textarea {
 	margin-top: 20px;
     margin-left: 80px;
     color: #ffffff;
-    font-size: 16px;
+    font-size: 18px;
     font-family: 宋体;
     font-weight: 600;
     background-color: #00953E;
