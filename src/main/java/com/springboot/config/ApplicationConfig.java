@@ -11,7 +11,6 @@ public class ApplicationConfig implements WebMvcConfigurer {
 	public void addViewControllers(ViewControllerRegistry registry) {
 		registry.addViewController("/index/index").setViewName("index/index");
 		registry.addViewController("/user/loginview").setViewName("users/loginview");
-		registry.addViewController("/file/findinfo").setViewName("files/findinfo");
 		registry.addViewController("/index/faliure").setViewName("index/faliure");
 		registry.addViewController("/index/success").setViewName("index/success");
 	}

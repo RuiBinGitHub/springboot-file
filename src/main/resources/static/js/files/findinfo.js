@@ -1,7 +1,12 @@
 $(document).ready(function() {
 
+	$("input[name=iname]").keydown(function() {
+        if (event.keyCode == 13)
+            $("#query").click();
+    });
+	
 	$("#query").click(function() {
-		var name = $("input[name=name]").val();
+		var name = $("input[name=iname]").val();
 		if (name == null || name.length == 0) {
 			alert("请输入文件夹名称！");
 			return false;

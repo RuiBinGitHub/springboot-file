@@ -12,11 +12,14 @@
       <div id="title">编辑文件</div>
       <div id="maininfo">
         <div>文件夹名称：</div>
-        <input type="text" name="name"/>
+        <input type="text" name="iname" list="list"/>
         <input type="button" id="query" value="查询"/>
       </div>
       <textarea name="text"></textarea>
       <input type="button" id="commit" value="确定"/>
     </div>
+    <datalist id="list">
+      <option th:each="item:${list}" th:value="${item}"/>
+    </datalist>
   </body>
 </html>

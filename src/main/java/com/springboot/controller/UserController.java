@@ -53,7 +53,7 @@ public class UserController {
 		System.out.println("123");
 		return view;
 	}
-	
+
 	@RequestMapping(value = "/findlist")
 	public ModelAndView findlist() {
 		ModelAndView view = new ModelAndView();
@@ -139,6 +139,8 @@ public class UserController {
 			return view;
 		}
 		user.setRole("role2");
+		if (user.getVest() == null)
+			user.setVest("");
 		fileUtils.append(user);
 		view.setViewName("redirect:/index/success");
 		return view;
@@ -158,6 +160,8 @@ public class UserController {
 			view.setViewName("index/failuer");
 			return view;
 		}
+		if (user.getVest() == null)
+			user.setVest("");
 		List<User> list = fileUtils.getList();
 		if (list != null && no < list.size()) {
 			list.get(no).setName(user.getName());
@@ -173,10 +177,10 @@ public class UserController {
 	public boolean delete(int no) {
 		User user = (User) AppUtils.findMap("user");
 		// 用户未登录
-		if (StringUtils.isEmpty(user)) 
+		if (StringUtils.isEmpty(user))
 			return false;
 		// 用户权限不足
-		if (!"role1".equals(user.getRole())) 
+		if (!"role1".equals(user.getRole()))
 			return false;
 		List<User> list = fileUtils.getList();
 		list.remove(no);
