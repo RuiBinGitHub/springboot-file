@@ -65,7 +65,7 @@ public class FileController {
 		String results = null;
 		while ((content = buffer.readLine()) != null) 
 			results = content;
-		if (results != null && results.length() > 4) {
+		if (results != null && results.length() >= 4) {
 			results = results.substring(2, results.length() - 2);
 			results = results.replace("\",\"", " ");
 		}
@@ -75,7 +75,8 @@ public class FileController {
 	}
 
 	@RequestMapping(value = "/editfile")
-	public String editFile(String text) throws IOException {
+	public String editFile(String name, String text) throws IOException {
+		file = new File(mypath + name + "/wx.json");
 		if (file == null || !file.exists())
 			return "提示：权限不足或文件不存在！";
 		FileOutputStream stream = new FileOutputStream(file);

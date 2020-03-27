@@ -29,10 +29,8 @@ public class FileUtils {
 			List<User> list = new ArrayList<User>();
 			FileReader reader = new FileReader(file);
 			BufferedReader buffer = new BufferedReader(reader);
-			while ((content = buffer.readLine()) != null) {
-				System.out.println(content);
+			while ((content = buffer.readLine()) != null) 
 				list.add(JSON.parseObject(content, User.class));
-			}
 			buffer.close();
 			reader.close();
 			return list;

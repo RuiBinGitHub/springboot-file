@@ -14,13 +14,16 @@ $(document).ready(function() {
 		var value = Ajax("findfile", {name : name});
 		if (value == "提示：权限不足或文件不存在！")
 			alert("提示：权限不足或文件不存在！");
-		else 
+		else  {
+			$("input[name=name]").val(name);
 			$("textarea[name=text]").val(value);
+		}
 	});
-
+	
 	$("#commit").click(function() {
-		var text = $("textarea[name=text]").val();
-		var value = Ajax("editfile", {text : text});
+		var name = $("input[name=name]").val();
+		var text = $("textarea[name=text]").val().trim();
+		var value = Ajax("editfile", {name: name, text : text});
 		if (value == "提示：权限不足或文件不存在！")
 			alert("提示：权限不足或文件不存在！");
 		else {
