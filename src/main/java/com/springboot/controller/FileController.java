@@ -38,6 +38,10 @@ public class FileController {
 		}
 		File file = new File(mypath);
 		String vest = user.getVest();
+		if (StringUtils.isEmpty(file.list())) {
+			view.setViewName("files/findinfo");
+			return view;
+		}
 		List<String> list1 = Arrays.asList(file.list());
 		List<String> list2 = Arrays.asList(vest.split(","));
 		if (!"role1".equals(user.getRole())) {
@@ -63,7 +67,7 @@ public class FileController {
 		BufferedReader buffer = new BufferedReader(reader);
 		String content = null;
 		String results = null;
-		while ((content = buffer.readLine()) != null) 
+		while ((content = buffer.readLine()) != null)
 			results = content;
 		if (results != null && results.length() >= 4) {
 			results = results.substring(2, results.length() - 2);
